@@ -31,6 +31,10 @@ public class Persona extends Thread{
         this.posicionFinal = posicionFinal;
         this.equipo = equipo;
     }
+
+    Persona() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     @Override
     public void run(){
@@ -87,7 +91,7 @@ public class Persona extends Thread{
     /**
      * Metodo que realiza el ciclo del competidor 3 de cada equipo y da por finalizada la carrera
      */
-    public void cicloPersonaTres(){
+    public  void cicloPersonaTres(){
         while (true) {
             int pasoActual = avanzar(3);
             if (pasoActual >= 100) {

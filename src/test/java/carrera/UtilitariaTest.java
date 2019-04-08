@@ -5,6 +5,8 @@
  */
 package carrera;
 
+
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -64,5 +66,25 @@ public class UtilitariaTest {
                 break;
         }
     }
+    /**
+     * Test of impresion.
+     */
+    @Test
     
+    public void testLlegada(){
+        System.out.println("Test Impresion");
+        Equipo e3 = new Equipo("ECU");
+        
+        Persona persona = new Persona("persona8",0,60,e3);
+        int resultadoAdelante = persona.avanzar(1);
+        boolean valor = false;
+        if(resultadoAdelante==1){
+            valor = true;
+        }
+        if(resultadoAdelante==2){
+            valor = true;
+        }
+        boolean resultadoEsperado = true;
+        assertEquals(resultadoEsperado, valor);   
+    }    
 }
